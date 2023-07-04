@@ -52,10 +52,10 @@ const TodoApp = () => {
                 <div className='itemsContainer'>
                   {todoList.map((todoItem, index) => {
                     return (
-                      <p className='todoItem'>
+                      <p key={index} className='todoItem'>
                         {todoItem}
                         <button
-                          onClick={deleteTodo}
+                          onClick={() => deleteTodo(index)}
                           className='btn btn-danger deleteBtn'
                         >
                           Delete
